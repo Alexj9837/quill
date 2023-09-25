@@ -1,7 +1,3 @@
--- Active: 1695664765106@@127.0.0.1@3306
-
-
-
 from flask import (Flask, jsonify, redirect, render_template, request,flash, Response,make_response)
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
