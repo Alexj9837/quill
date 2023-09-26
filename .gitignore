@@ -1,0 +1,52 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.env
+
+# IDE files
+.idea/
+.vscode/
+
+# Compiled Python files
+*.pyc
+*.pyo
+__pycache__/
+
+# Log files
+*.log
+
+# Environment variables file
+.env
+
+# Cache and session files
+.cache/
+.sessions/
+
+# Database files
+*.db
+
+# Generated HTML and XML files
+*.pyc
+*.pyo
+
+# Static files
+/static/
+
+# Compiled JavaScript files
+*.js
+
+# Compiled CSS files
+*.css
+
+# Dependency folders
+lib/
+lib64/
+bin/
+include/
+
+# Other
+*~
+.DS_Store
