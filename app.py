@@ -59,6 +59,7 @@ def get_convention_by_id(id):
 
 @app.route('/constitutional_conventions/<id>', methods=['PUT'])
 def update_convention_by_id(id):
+    print("update con")
     data = request.get_json()
     convention = ConstitutionalConvention.query.get(id)
     if data.get('date'):
