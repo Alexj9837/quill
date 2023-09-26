@@ -41,7 +41,7 @@ class ConstitutionalConventionSchema(SQLAlchemyAutoSchema):
     convention_id = fields.Number(dump_only=True)
     date = fields.Date()
     location = fields.String()
-    participants = fields.String()
+    participants = fields.List(fields.String())
 
 @app.route('/constitutional_conventions', methods=['GET'])
 def get_conventions():
@@ -133,7 +133,7 @@ def update_committee_by_id(id):
     if data.get('committee_name'):
         committee.committee_name = data['committee_name']
     if data.get('committee_members'):
-        committee.committee_members = data['committee_members']
+        committee.committee_members = ', '.join(data['committee_members'])
     if data.get('topics_covered'):
         committee.topics_covered = data['topics_covered']
     db.session.add(committee)
@@ -207,8 +207,8 @@ def update_debate_by_id(id):
         debate.debate_date = data['debate_date']
     if data.get('debate_location'):
         debate.debate_location = data['debate_location']
-    if data.get('participants'):
-        debate.participants = data['participants']
+    if data.get('committee_members'):
+        debate.participants = ', '.join(data['participants'])       
     if data.get('debate_content'):
         debate.debate_content = data['debate_content']
     if data.get('committee_id'):
