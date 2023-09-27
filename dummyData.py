@@ -1,12 +1,12 @@
 from app import db, ConstitutionalConvention, Committees, Debates, Documents, Commentaries,app
-from datetime import datetime  # Import datetime module for date parsing
+from datetime import datetime  
 
 from app import db
 
 def create_dummy_data():
-    with app.app_context():  # Establish the Flask application context
+    with app.app_context():  
 
-        # Create Constitutional Convention data
+
         convention1 = ConstitutionalConvention(
             date=datetime(1776, 7, 4),
             location="Philadelphia",
@@ -21,7 +21,7 @@ def create_dummy_data():
         )
         convention2.create()
 
-        # Create Committee data
+        
         committee1 = Committees(
             committee_name="Declaration Committee",
             committee_members="Thomas Jefferson, John Adams, Benjamin Franklin",
@@ -36,7 +36,7 @@ def create_dummy_data():
         )
         committee2.create()
 
-        # Create Document data
+        
         document1 = Documents(
             document_type="Declaration of Independence",
             author="Thomas Jefferson",
@@ -51,7 +51,7 @@ def create_dummy_data():
         )
         document2.create()
 
-        # Create Debate data
+        
         debate1 = Debates(
             debate_date=datetime(1776, 7, 2),
             debate_location="Philadelphia",
@@ -72,7 +72,7 @@ def create_dummy_data():
         )
         debate2.create()
 
-        # Create Commentary data
+        
         commentary1 = Commentaries(
             author="John Adams",
             timestamp=datetime(1776, 7, 4),
