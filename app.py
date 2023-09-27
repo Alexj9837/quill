@@ -6,19 +6,16 @@ from marshmallow import fields
 
 app = Flask(__name__)
 
-# Configure your database URI here (using SQLite as an example)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.sqlite3'
 
-# Optional: Enable SQLAlchemy track modifications, but it's recommended to disable it
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# Optional: Secret key for session management and CSRF protection
-app.config['SECRET_KEY'] = 'your-secret-key-goes-here'
+app.config['SECRET_KEY'] = 'supersneaky'
 
-# Initialize SQLAlchemy
+
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-# Define your database models below using SQLAlchemy
 
 
 class ConstitutionalConvention(db.Model):
