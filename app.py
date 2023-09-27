@@ -38,7 +38,8 @@ class ConstitutionalConventionSchema(SQLAlchemyAutoSchema):
     convention_id = fields.Number(dump_only=True)
     date = fields.Date()
     location = fields.String()
-    participants = fields.List(fields.String())
+    #participants = fields.List(fields.String())
+    participants = fields.String()
 
 @app.route('/constitutional_conventions', methods=['GET'])
 def get_conventions():
